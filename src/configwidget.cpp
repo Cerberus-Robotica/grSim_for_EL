@@ -41,51 +41,51 @@ ConfigWidget::ConfigWidget() {
 
   VarListPtr game_vars(new VarList("Game"));
   geo_vars->addChild(game_vars);
-  ADD_ENUM(StringEnum, Division, "Division EL", "Division")
+  ADD_ENUM(StringEnum, Division, "Division A", "Division")
+  ADD_TO_ENUM(Division, "Division A");
   ADD_TO_ENUM(Division, "Division EL");
-  ADD_TO_ENUM(Division, "Division B");
   END_ENUM(game_vars, Division);
   ADD_VALUE(game_vars,Int, Robots_Count, 11, "Robots Count")
   ADD_VALUE(game_vars, String, ColorRobotBlue, "#0000ff", "Color Robot Blue")
   ADD_VALUE(game_vars, String, ColorRobotYellow, "#ffff00", "Color Robot Yellow")
 
   VarListPtr fields_vars(new VarList("Field"));
-  VarListPtr div_a_vars(new VarList("Division EL"));
-  VarListPtr div_b_vars(new VarList("Division B"));
+  VarListPtr div_a_vars(new VarList("Division A"));
+  VarListPtr div_b_vars(new VarList("Division EL"));
   geo_vars->addChild(fields_vars);
   fields_vars->addChild(div_a_vars);
   fields_vars->addChild(div_b_vars);
 
   ADD_VALUE(div_a_vars, Double, DivA_Field_Line_Width,0.010,"Line Thickness")
-  ADD_VALUE(div_a_vars, Double, DivA_Field_Length,4.500,"Length")
-  ADD_VALUE(div_a_vars, Double, DivA_Field_Width,3.000,"Width")
+  ADD_VALUE(div_a_vars, Double, DivA_Field_Length,12.000,"Length")
+  ADD_VALUE(div_a_vars, Double, DivA_Field_Width,9.000,"Width")
   ADD_VALUE(div_a_vars, Double, DivA_Field_Rad,0.500,"Radius")
   ADD_VALUE(div_a_vars, Double, DivA_Field_Free_Kick,0.700,"Free Kick Distance From Defense Area")
-  ADD_VALUE(div_a_vars, Double, DivA_Field_Penalty_Width,1.35,"Penalty width")
-  ADD_VALUE(div_a_vars, Double, DivA_Field_Penalty_Depth,0.50,"Penalty depth")
-  ADD_VALUE(div_a_vars, Double, DivA_Field_Penalty_Point,3.00,"Penalty point")
+  ADD_VALUE(div_a_vars, Double, DivA_Field_Penalty_Width,3.60,"Penalty width")
+  ADD_VALUE(div_a_vars, Double, DivA_Field_Penalty_Depth,1.80,"Penalty depth")
+  ADD_VALUE(div_a_vars, Double, DivA_Field_Penalty_Point,8.00,"Penalty point")
   ADD_VALUE(div_a_vars, Double, DivA_Field_Margin,0.3,"Margin")
   ADD_VALUE(div_a_vars, Double, DivA_Field_Referee_Margin,0.0,"Referee margin")
   ADD_VALUE(div_a_vars, Double, DivA_Wall_Thickness,0.050,"Wall thickness")
   ADD_VALUE(div_a_vars, Double, DivA_Goal_Thickness,0.020,"Goal thickness")
   ADD_VALUE(div_a_vars, Double, DivA_Goal_Depth,0.18,"Goal depth")
-  ADD_VALUE(div_a_vars, Double, DivA_Goal_Width,0.8,"Goal width")
+  ADD_VALUE(div_a_vars, Double, DivA_Goal_Width,1.8,"Goal width")
   ADD_VALUE(div_a_vars, Double, DivA_Goal_Height,0.160,"Goal height")
 
   ADD_VALUE(div_b_vars, Double, DivB_Field_Line_Width,0.010,"Line Thickness")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Length,9.000,"Length")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Width,6.000,"Width")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Length,4.500,"Length")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Width,3.000,"Width")
   ADD_VALUE(div_b_vars, Double, DivB_Field_Rad,0.500,"Radius")
   ADD_VALUE(div_b_vars, Double, DivB_Field_Free_Kick,0.700,"Free Kick Distance From Defense Area")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Width,2.00,"Penalty width")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Depth,1.0,"Penalty depth")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Point,6.00,"Penalty point")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Margin,0.30,"Margin")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Width,1.35,"Penalty width")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Depth,0.50,"Penalty depth")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Point,3.00,"Penalty point")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Margin,0.3,"Margin")
   ADD_VALUE(div_b_vars, Double, DivB_Field_Referee_Margin,0.0,"Referee margin")
   ADD_VALUE(div_b_vars, Double, DivB_Wall_Thickness,0.050,"Wall thickness")
   ADD_VALUE(div_b_vars, Double, DivB_Goal_Thickness,0.020,"Goal thickness")
   ADD_VALUE(div_b_vars, Double, DivB_Goal_Depth,0.18,"Goal depth")
-  ADD_VALUE(div_b_vars, Double, DivB_Goal_Width,1.000,"Goal width")
+  ADD_VALUE(div_b_vars, Double, DivB_Goal_Width,0.8,"Goal width")
   ADD_VALUE(div_b_vars, Double, DivB_Goal_Height,0.160,"Goal height")
 
   ADD_ENUM(StringEnum,YellowTeam,"Parsian","Yellow Team");
